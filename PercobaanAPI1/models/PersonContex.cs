@@ -1,31 +1,110 @@
+using PercobaanApi1.Helpers;
+using Npgsql;
+
 namespace PercobaanApi1.Models
 {
     public class PersonContext
     {
+        private string __constr;
+        public string __ErrorMsg;
+
+        public PersonContext(string pConstr)
+        {
+            __constr = pConstr;
+        }
         public List<Person> ListPerson()
         {
-            List<Person> list1 = new List<Person>(); Object[,] arrayPerson = new Object[,]{
-{1, "Budi", "Jember", "budi@gmail.com" },
-{2, "Iwan", "Banyuwangi", "iwan@gmail.com" },
-{3, "Wati", "Lumajang", "wati@gmail.com" }
-};
-            for (int i = 0; i < arrayPerson.GetLength(0); i++)
+            List<Person> list1 = new List<Person>();
+            string query = string.Format(@"SELECT id_person, nama, alamat, email FROM person");
+
+            sqlDBHelper db = new sqlDBHelper(this.__constr);
+            try
             {
-                list1.Add(new Person()
+                NpgsqlCommand cmd = db.GetNpgsqlCommand(query);
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
                 {
-                    id_person = int.Parse(arrayPerson[i, 0].ToString()),
-                    nama = arrayPerson[i, 1].ToString(),
-                    alamat = arrayPerson[i, 2].ToString(),
-                    email = arrayPerson[i, 3].ToString()
-                });
+                    list1.Add(new Person()
+                    {
+                        id_person = int.Parse(reader["id_person"].ToString()),
+                        nama = reader["nama"].ToString(),
+                        alamat = reader["alamat"].ToString(),
+                        email = reader["email"].ToString()
+                    });
+                }
+                cmd.Dispose();
+                db.closeConnection();
+            }
+            catch (Exception ex)
+            {
+                __ErrorMsg = ex.Message;
             }
             return list1;
         }
 
-        public Person GetPerson(int id)
+        public void AddPerson(Person person)
         {
-            var person = ListPerson().Find(x => x.id_person == id);
-            return person;
+            string query = string.Format("INSERT INTO person (nama, alamat, email) VALUES (@nama, @alamat, @email)");
+
+            sqlDBHelper db = new sqlDBHelper(this.__constr);
+
+            try
+            {
+                using (NpgsqlCommand cmd = db.GetNpgsqlCommand(query))
+                {
+                    cmd.Parameters.AddWithValue("@nama", person.nama);
+                    cmd.Parameters.AddWithValue("@alamat", person.alamat);
+                    cmd.Parameters.AddWithValue("@email", person.email);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                __ErrorMsg = ex.Message;
+            }
         }
+
+        public void UpdatePerson(int id_person, Person person)
+        {
+
+            string query = string.Format(@"UPDATE person SET nama = @nama, alamat = @alamat, email = @email WHERE id_person = @id_person");
+            sqlDBHelper db = new sqlDBHelper(this.__constr);
+
+
+
+            using (NpgsqlCommand cmd = db.GetNpgsqlCommand(query))
+            {
+                cmd.Parameters.AddWithValue("@id_person", person.id_person);
+                cmd.Parameters.AddWithValue("@nama", person.nama);
+                cmd.Parameters.AddWithValue("@alamat", person.alamat);
+                cmd.Parameters.AddWithValue("@email", person.email);
+
+                cmd.ExecuteNonQuery();
+            }
+
+        }
+
+
+        public void DeletePerson(int id_person)
+        {
+
+            string query = string.Format(@"DELETE FROM person WHERE id_person = @id_person");
+            sqlDBHelper db = new sqlDBHelper(this.__constr);
+
+
+
+            using (NpgsqlCommand cmd = db.GetNpgsqlCommand(query))
+            {
+                cmd.Parameters.AddWithValue("@id_person", id_person);
+                cmd.ExecuteNonQuery();
+            }
+
+        }
+
+
+
     }
 }

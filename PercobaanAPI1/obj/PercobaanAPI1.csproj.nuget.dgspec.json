@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\KULIAH\\Semester 4\\PAA\\Tugas1\\PercobaanAPI1\\PercobaanAPI1.csproj": {}
+    "D:\\KULIAH\\Semester 4\\PAA\\Pemrograman-Antarmuka-Aplikasi\\PercobaanAPI1\\PercobaanAPI1.csproj": {}
   },
   "projects": {
-    "D:\\KULIAH\\Semester 4\\PAA\\Tugas1\\PercobaanAPI1\\PercobaanAPI1.csproj": {
+    "D:\\KULIAH\\Semester 4\\PAA\\Pemrograman-Antarmuka-Aplikasi\\PercobaanAPI1\\PercobaanAPI1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\KULIAH\\Semester 4\\PAA\\Tugas1\\PercobaanAPI1\\PercobaanAPI1.csproj",
+        "projectUniqueName": "D:\\KULIAH\\Semester 4\\PAA\\Pemrograman-Antarmuka-Aplikasi\\PercobaanAPI1\\PercobaanAPI1.csproj",
         "projectName": "PercobaanAPI1",
-        "projectPath": "D:\\KULIAH\\Semester 4\\PAA\\Tugas1\\PercobaanAPI1\\PercobaanAPI1.csproj",
+        "projectPath": "D:\\KULIAH\\Semester 4\\PAA\\Pemrograman-Antarmuka-Aplikasi\\PercobaanAPI1\\PercobaanAPI1.csproj",
         "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "D:\\KULIAH\\Semester 4\\PAA\\Tugas1\\PercobaanAPI1\\obj\\",
+        "outputPath": "D:\\KULIAH\\Semester 4\\PAA\\Pemrograman-Antarmuka-Aplikasi\\PercobaanAPI1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\Visual Studio\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -27,6 +27,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,17 +40,16 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -66,24 +66,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -92,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
