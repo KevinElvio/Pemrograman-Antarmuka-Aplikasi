@@ -51,11 +51,11 @@ namespace PercobaanAPI1.Controllers
             {
                 PersonContext context = new PersonContext(__constr);
                 context.UpdatePerson(id_person, person);
-                return Ok();
+                return Ok("Berhasil Mengubah Data {id_person}");
             }
             catch
             {
-                return BadRequest();
+                return BadRequest("Gagal Mengubah Data");
             }
         }
 
@@ -67,7 +67,7 @@ namespace PercobaanAPI1.Controllers
             {
                 PersonContext context = new PersonContext(__constr);
                 context.DeletePerson(id_person);
-                return Ok();
+                return Ok("Data Berhasil Dihapus");
             }
             catch
             {
