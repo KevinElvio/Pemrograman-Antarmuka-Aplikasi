@@ -17,23 +17,23 @@ namespace PercobaanAPI1.Controllers
             return View();
         }
 
-        [HttpGet("api/person")]
+        [HttpGet("api/murid")]
 
-        public ActionResult<Person> ListPerson()
+        public ActionResult<Murid> ListPerson()
         {
             PersonContext context = new PersonContext(this.__constr);
-            List<Person> ListPerson = context.ListPerson();
+            List<Murid> ListPerson = context.ListPerson();
             return Ok(ListPerson);
         }
 
 
-        [HttpPost("api/person/create")]
-        public ActionResult AddPerson(Person person)
+        [HttpPost("api/murid/create")]
+        public ActionResult AddMurid(Murid person)
         {
             try
             {
                 PersonContext context = new PersonContext(__constr);
-                context.AddPerson(person);
+                context.AddMurid(person);
                 return Ok("Berhasil menambahkan data");
             }
             catch (Exception ex)
@@ -44,14 +44,14 @@ namespace PercobaanAPI1.Controllers
 
 
 
-        [HttpPatch("api/person/update/{id_person}")]
-        public ActionResult UpdatePerson(int id_person, Person person)
+        [HttpPatch("api/murid/update/{id_murid}")]
+        public ActionResult UpdateMurid(int id_murid, Murid person)
         {
             try
             {
                 PersonContext context = new PersonContext(__constr);
-                context.UpdatePerson(id_person, person);
-                return Ok("Berhasil Mengubah Data {id_person}");
+                context.UpdateMurid(id_murid, person);
+                return Ok("Berhasil Mengubah Data {id_murid}");
             }
             catch
             {
@@ -60,13 +60,13 @@ namespace PercobaanAPI1.Controllers
         }
 
 
-        [HttpDelete("api/person/delete/{id_person}")]   
-        public ActionResult DeletePerson(int id_person)
+        [HttpDelete("api/murid/delete/{id_murid}")]   
+        public ActionResult DeleteMurid(int id_murid)
         {
             try
             {
                 PersonContext context = new PersonContext(__constr);
-                context.DeletePerson(id_person);
+                context.DeleteMurid(id_murid);
                 return Ok("Data Berhasil Dihapus");
             }
             catch

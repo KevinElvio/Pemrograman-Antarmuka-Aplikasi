@@ -12,10 +12,10 @@ namespace PercobaanApi1.Models
         {
             __constr = pConstr;
         }
-        public List<Person> ListPerson()
+        public List<Murid> ListPerson()
         {
-            List<Person> list1 = new List<Person>();
-            string query = string.Format(@"SELECT id_person, nama, alamat, email FROM person");
+            List<Murid> list1 = new List<Murid>();
+            string query = string.Format(@"SELECT id_murid, nama, alamat, email FROM person");
 
             sqlDBHelper db = new sqlDBHelper(this.__constr);
             try
@@ -24,9 +24,9 @@ namespace PercobaanApi1.Models
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    list1.Add(new Person()
+                    list1.Add(new Murid()
                     {
-                        id_person = int.Parse(reader["id_person"].ToString()),
+                        id_murid = int.Parse(reader["id_murid"].ToString()),
                         nama = reader["nama"].ToString(),
                         alamat = reader["alamat"].ToString(),
                         email = reader["email"].ToString()
@@ -42,7 +42,7 @@ namespace PercobaanApi1.Models
             return list1;
         }
 
-        public void AddPerson(Person person)
+        public void AddMurid(Murid person)
         {
             string query = string.Format("INSERT INTO person (nama, alamat, email) VALUES (@nama, @alamat, @email)");
 
@@ -67,17 +67,17 @@ namespace PercobaanApi1.Models
             }
         }
 
-        public void UpdatePerson(int id_person, Person person)
+        public void UpdateMurid(int id_murid, Murid person)
         {
 
-            string query = string.Format(@"UPDATE person SET nama = @nama, alamat = @alamat, email = @email WHERE id_person = @id_person");
+            string query = string.Format(@"UPDATE person SET nama = @nama, alamat = @alamat, email = @email WHERE id_murid = @id_murid");
             sqlDBHelper db = new sqlDBHelper(this.__constr);
 
 
 
             using (NpgsqlCommand cmd = db.GetNpgsqlCommand(query))
             {
-                cmd.Parameters.AddWithValue("@id_person", person.id_person);
+                cmd.Parameters.AddWithValue("@id_murid", person.id_murid);
                 cmd.Parameters.AddWithValue("@nama", person.nama);
                 cmd.Parameters.AddWithValue("@alamat", person.alamat);
                 cmd.Parameters.AddWithValue("@email", person.email);
@@ -88,17 +88,17 @@ namespace PercobaanApi1.Models
         }
 
 
-        public void DeletePerson(int id_person)
+        public void DeleteMurid(int id_murid)
         {
 
-            string query = string.Format(@"DELETE FROM person WHERE id_person = @id_person");
+            string query = string.Format(@"DELETE FROM person WHERE id_murid = @id_murid");
             sqlDBHelper db = new sqlDBHelper(this.__constr);
 
 
 
             using (NpgsqlCommand cmd = db.GetNpgsqlCommand(query))
             {
-                cmd.Parameters.AddWithValue("@id_person", id_person);
+                cmd.Parameters.AddWithValue("@id_murid", id_murid);
                 cmd.ExecuteNonQuery();
             }
 
