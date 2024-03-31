@@ -11,8 +11,8 @@
       "RelativeMoniker": "D:0:0:{BD848429-1646-4528-87B7-8AF0696EC033}|PercobaanAPI1.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD848429-1646-4528-87B7-8AF0696EC033}|PercobaanAPI1.csproj|d:\\kuliah\\semester 4\\paa\\pemrograman-antarmuka-aplikasi\\percobaanapi1\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD848429-1646-4528-87B7-8AF0696EC033}|PercobaanAPI1.csproj|solutionrelative:models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD848429-1646-4528-87B7-8AF0696EC033}|PercobaanAPI1.csproj|d:\\kuliah\\semester 4\\paa\\pemrograman-antarmuka-aplikasi\\percobaanapi1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD848429-1646-4528-87B7-8AF0696EC033}|PercobaanAPI1.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD848429-1646-4528-87B7-8AF0696EC033}|PercobaanAPI1.csproj|d:\\kuliah\\semester 4\\paa\\pemrograman-antarmuka-aplikasi\\percobaanapi1\\models\\logincontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,13 +58,26 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\KULIAH\\Semester 4\\PAA\\Pemrograman-Antarmuka-Aplikasi\\PercobaanAPI1\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\KULIAH\\Semester 4\\PAA\\Pemrograman-Antarmuka-Aplikasi\\PercobaanAPI1\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-31T14:54:13.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "PersonController.cs",
               "DocumentMoniker": "D:\\KULIAH\\Semester 4\\PAA\\Pemrograman-Antarmuka-Aplikasi\\PercobaanAPI1\\Controllers\\PersonController.cs",
               "RelativeDocumentMoniker": "Controllers\\PersonController.cs",
               "ToolTip": "D:\\KULIAH\\Semester 4\\PAA\\Pemrograman-Antarmuka-Aplikasi\\PercobaanAPI1\\Controllers\\PersonController.cs",
               "RelativeToolTip": "Controllers\\PersonController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAAAFMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-31T08:44:04.626Z",
               "EditorCaption": ""
@@ -77,21 +90,10 @@
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
               "ToolTip": "D:\\KULIAH\\Semester 4\\PAA\\Pemrograman-Antarmuka-Aplikasi\\PercobaanAPI1\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T08:43:58.05Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cs",
-              "DocumentMoniker": "D:\\KULIAH\\Semester 4\\PAA\\Pemrograman-Antarmuka-Aplikasi\\PercobaanAPI1\\models\\Login.cs",
-              "RelativeDocumentMoniker": "models\\Login.cs",
-              "ToolTip": "D:\\KULIAH\\Semester 4\\PAA\\Pemrograman-Antarmuka-Aplikasi\\PercobaanAPI1\\models\\Login.cs",
-              "RelativeToolTip": "models\\Login.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T08:43:55.09Z"
+              "WhenOpened": "2024-03-31T08:43:58.05Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -101,9 +103,10 @@
               "RelativeDocumentMoniker": "models\\LoginContext.cs",
               "ToolTip": "D:\\KULIAH\\Semester 4\\PAA\\Pemrograman-Antarmuka-Aplikasi\\PercobaanAPI1\\models\\LoginContext.cs",
               "RelativeToolTip": "models\\LoginContext.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAowEgAAAAwAAAA",
+              "ViewState": "AQIAACsAAAAAAAAAAAAgwE8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T08:43:54.337Z"
+              "WhenOpened": "2024-03-31T08:43:54.337Z",
+              "EditorCaption": ""
             }
           ]
         },
