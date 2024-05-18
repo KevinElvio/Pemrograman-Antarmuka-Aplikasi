@@ -1,0 +1,13 @@
+D:\KULIAH\Semester 4\PAA\Pemrograman-Antarmuka-Aplikasi\Modul_4\Modul_4\obj\Debug\Modul_4.csproj.AssemblyReference.cache
+D:\KULIAH\Semester 4\PAA\Pemrograman-Antarmuka-Aplikasi\Modul_4\Modul_4\obj\Debug\Modul_4.Form1.resources
+D:\KULIAH\Semester 4\PAA\Pemrograman-Antarmuka-Aplikasi\Modul_4\Modul_4\obj\Debug\Modul_4.Properties.Resources.resources
+D:\KULIAH\Semester 4\PAA\Pemrograman-Antarmuka-Aplikasi\Modul_4\Modul_4\obj\Debug\Modul_4.csproj.GenerateResource.cache
+D:\KULIAH\Semester 4\PAA\Pemrograman-Antarmuka-Aplikasi\Modul_4\Modul_4\obj\Debug\Modul_4.csproj.CoreCompileInputs.cache
+D:\KULIAH\Semester 4\PAA\Pemrograman-Antarmuka-Aplikasi\Modul_4\Modul_4\bin\Debug\Modul_4.exe.config
+D:\KULIAH\Semester 4\PAA\Pemrograman-Antarmuka-Aplikasi\Modul_4\Modul_4\bin\Debug\Modul_4.exe
+D:\KULIAH\Semester 4\PAA\Pemrograman-Antarmuka-Aplikasi\Modul_4\Modul_4\bin\Debug\Modul_4.pdb
+D:\KULIAH\Semester 4\PAA\Pemrograman-Antarmuka-Aplikasi\Modul_4\Modul_4\bin\Debug\Newtonsoft.Json.dll
+D:\KULIAH\Semester 4\PAA\Pemrograman-Antarmuka-Aplikasi\Modul_4\Modul_4\bin\Debug\Newtonsoft.Json.xml
+D:\KULIAH\Semester 4\PAA\Pemrograman-Antarmuka-Aplikasi\Modul_4\Modul_4\obj\Debug\Modul_4.csproj.Up2Date
+D:\KULIAH\Semester 4\PAA\Pemrograman-Antarmuka-Aplikasi\Modul_4\Modul_4\obj\Debug\Modul_4.exe
+D:\KULIAH\Semester 4\PAA\Pemrograman-Antarmuka-Aplikasi\Modul_4\Modul_4\obj\Debug\Modul_4.pdb
