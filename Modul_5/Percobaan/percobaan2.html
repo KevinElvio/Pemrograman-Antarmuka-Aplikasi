@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <form onsubmit="kirim()">
+        <input type="text" name="name" id="nama" placeholder="Nama..."/>
+        <input type="text" name="avatar" id="avatar" placeholder="avatar"/> 
+        <button type="submit">Kirim</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        function kirim(){
+            event.preventDefault();
+            $("#result").html("");
+            $.ajax({
+                url : "https://64fada7acb9c00518f7a4784.mockapi.io/users/36",
+                method: "DELETE",
+                data : {
+                    name : $("#nama").val(),
+                    avatar : $("#avatar").val(),
+                },
+                success: function (data){
+                    $("#result").html(
+                        `<p>Sukses</p>` +
+                        `<p>id = ${data.id}</p>` +
+                        `<p>name = ${data.name}</p>` +
+                        `<p>avatar = ${data.avatar}</p>`
+                    );
+                },
+            })
+        }
+    </script>
+</body>
+</html> 

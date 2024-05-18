@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <button onclick="refresh()">Refresh</button>
+    <div id="data"></div>
+    <script>
+        function refresh(){
+            $.ajax({
+                url : "https://64fada7acb9c00518f7a4784.mockapi.io/salah",
+                success: function(data){
+                    $("#data").html(data.map(d=> `<p>${d.name}</p>`));
+                },
+                error: function(res, status, err){
+                    $("#data").html(`<p>${status}: ${err} | code: ${res.status}`)
+                }
+            });
+        }
+    </script>
+</body>
+</html> 
